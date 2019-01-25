@@ -3,6 +3,12 @@
     xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <name>AESDecryptor</name>
+    <description>Aes file encryptor/decryptor for Cordova.</description>
+    <license>ISC</license>
+    <keywords>aes,cordova,file,encrypt,decrypt</keywords>
+    <repo>https://github.com/jomarti/aes-decryptor.git</repo>
+    <issue>https://github.com/jomarti/aes-decryptor.git/issues</issue>
+
     <js-module name="AESDecryptor" src="www/AESDecryptor.js">
         <clobbers target="AESDecryptor" />
     </js-module>

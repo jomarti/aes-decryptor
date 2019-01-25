@@ -1,7 +1,7 @@
 AESDecryptor
 ====
 
-AES file encryption/decryption for Cordova.
+AES file encryption/decryption for Cordova. (Fork of cordova-save plugin)
 
 ## Install
 
