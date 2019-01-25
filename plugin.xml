@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.soprasteria.plugin.aesdecryptor" version="1.0.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>AESDecryptor</name>
+    <js-module name="AESDecryptor" src="www/AESDecryptor.js">
+        <clobbers target="AESDecryptor" />
+    </js-module>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="AESDecryptor">
+                <param name="ios-package" value="AESDecryptor" />
+            </feature>
+        </config-file>
+        <framework src="Foundation.framework" />
+        <framework src="Security.framework" />
+        <header-file src="src/ios/AESDecryptor.h" />
+        <source-file src="src/ios/AESDecryptor.m" />
+        <header-file src="src/ios/RNCryptor/RNCryptor+Private.h" />
+        <header-file src="src/ios/RNCryptor/RNCryptor-Prefix.pch" />
+        <header-file src="src/ios/RNCryptor/RNCryptor.h" />
+        <source-file src="src/ios/RNCryptor/RNCryptor.m" />
+        <header-file src="src/ios/RNCryptor/RNCryptorEngine.h" />
+        <source-file src="src/ios/RNCryptor/RNCryptorEngine.m" />
+        <header-file src="src/ios/RNCryptor/RNDecryptor.h" />
+        <source-file src="src/ios/RNCryptor/RNDecryptor.m" />
+        <header-file src="src/ios/RNCryptor/RNEncryptor.h" />
+        <source-file src="src/ios/RNCryptor/RNEncryptor.m" />
+    </platform>
+</plugin>

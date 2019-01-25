@@ -1,0 +1,25 @@
+{
+  "name": "aesdecryptor",
+  "version": "1.0.0",
+  "description": "AES File Encryptor/Decryptor",
+  "main": "index.js",
+  "cordova": {
+    "id": "AESDecryptor",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cordova",
+    "aes",
+    "file",
+    "encryptor",
+    "decryptor",
+    "cordova-ios"
+  ],
+  "author": "crash_soft",
+  "license": "ISC"
+}
