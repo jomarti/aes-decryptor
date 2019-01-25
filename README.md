@@ -1,21 +1,19 @@
 AESDecryptor
 ====
 
-[![Build Status](https://travis-ci.org/disusered/cordova-safe.svg)](https://travis-ci.org/disusered/cordova-safe) [![Code Climate](https://codeclimate.com/github/disusered/cordova-safe/badges/gpa.svg)](https://codeclimate.com/github/disusered/cordova-safe) 
-
-> AES file encryption/decryption for Cordova.
+AES file encryption/decryption for Cordova.
 
 ## Install
 
 ```bash
-$ cordova plugin add 
+$ cordova plugin add https://github.com/jomarti/aes-decryptor.git
 ```
 
 ## Usage
 
 ```javascript
 
-    key = 'VVFQLG305';
+ let key = 'VVFQLG305';
 
 
 function success(encryptedFile) {
