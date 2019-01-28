@@ -10,10 +10,10 @@ var exec = require('cordova/exec');
    * @param {Function} error Failure callback
    * @returns {void}
    */
-module.exports.decrypt = function (path, destPath, passPhrase, success, error) {
+module.exports.decrypt = function (path, destPath, passPhrase, iv, salt, success, error) {
     encryptSuccess = onSuccess.bind(null, success);
     encryptError = onError.bind(null, error);
-    exec(encryptSuccess, encryptError, 'AESDecryptor', 'decrypt', [path, destPath, passPhrase]);
+    exec(encryptSuccess, encryptError, 'AESDecryptor', 'decrypt', [path, destPath, passPhrase, iv, salt]);
 };
 
 /**
@@ -26,10 +26,10 @@ module.exports.decrypt = function (path, destPath, passPhrase, success, error) {
    * @param {Function} error Failure callback
    * @returns {void}
    */
-module.exports.encrypt = function (path, destPath, passPhrase, success, error) {
+module.exports.encrypt = function (path, destPath, passPhrase, iv, salt, success, error) {
     decryptSuccess = onSuccess.bind(null, success);
     decryptError = onError.bind(null, error);
-    exec(decryptSuccess, decryptError, 'AESDecryptor', 'encrypt', [path, destPath, passPhrase]);
+    exec(decryptSuccess, decryptError, 'AESDecryptor', 'encrypt', [path, destPath, passPhrase, iv, salt]);
 };
 
 /**

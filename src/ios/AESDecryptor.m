@@ -16,7 +16,7 @@
   if (path != nil) {
     pluginResult =
         [CDVPluginResult resultWithStatus:CDVCommandStatus_OK
-                          messageAsString:path];
+                          messageAsString:YES];
   } else {
     pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
   }
@@ -39,7 +39,7 @@
   if (path != nil) {
     pluginResult =
         [CDVPluginResult resultWithStatus:CDVCommandStatus_OK
-                          messageAsString:path];
+                          messageAsString:YES];
   } else {
     pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
   }
@@ -63,6 +63,8 @@
   NSString *filePath = [command.arguments objectAtIndex:0];
   NSString *destFilePath = [command.arguments objectAtIndex:1];
   NSString *passPhase = [command.arguments objectAtIndex:2];
+  NSString *iv = [command.arguments objectAtIndex:3];
+  NSString *salt = [command.arguments objectAtIndex:4];
   NSString *fileName = [filePath lastPathComponent];
   NSFileManager *fileManager = [NSFileManager defaultManager];
   NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
